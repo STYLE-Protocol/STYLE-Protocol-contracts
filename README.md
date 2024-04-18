@@ -81,7 +81,3 @@ truffle test
 ## Contributing
 
 Contributions are welcome! Please feel free to submit pull requests, or report bugs and suggest features via issues.
-
----
-
-This README provides a basic introduction and guide to your project. Feel free to expand each section with more specific details or additional sections that are relevant to your project's broader documentation needs.
