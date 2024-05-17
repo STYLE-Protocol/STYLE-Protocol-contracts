@@ -1790,18 +1790,18 @@ pragma solidity ^0.8.9;
 
 contract VestingWalletHolder is IVestingWalletHolder {
     address payable private immutable _vestingWalletImplementation;
-    address private immutable _owner;
+    // address private immutable _owner;
 
     mapping(address => mapping(uint16 => address)) private _contracts;
     mapping(address => uint16) private _vestingcounts;
 
-    modifier onlyOwner() {
-        if (_owner == msg.sender) {
-            _;
-        } else {
-            revert ImproperOwner();
-        }
-    }
+    // modifier onlyOwner() {
+    //     if (_owner == msg.sender) {
+    //         _;
+    //     } else {
+    //         revert ImproperOwner();
+    //     }
+    // }
 
     /**
      * @inheritdoc IVestingWalletHolder
@@ -1842,7 +1842,7 @@ contract VestingWalletHolder is IVestingWalletHolder {
 
     constructor() {
         _vestingWalletImplementation = payable(address(new VestingWallet()));
-        _owner = msg.sender;
+        // _owner = msg.sender;
     }
 
     function _createVesting(
